@@ -23,7 +23,7 @@ shinyServer(
   function(input, output) {
     output$inputValue <- renderPrint({paste(input$sepal_length,input$sepal_width,input$petal_length,input$petal_width, sep=",")})
     output$prediction <- renderPrint({predictiris(input$sepal_length,input$sepal_width,input$petal_length,input$petal_width)})
-    output$instruction <- renderPrint("please enter the attribute of an iris, the system will return the type of the iris. The dataset for building the model is the iris dataset, please type the 'iris' in R to find more information")
+    output$instruction <- renderPrint("please enter the attribute of an iris, the system will return the type of the iris base on its build-in prediction model. The dataset for building the model is the iris dataset, please type the 'iris' in R to find more information")
   }
 )
 
